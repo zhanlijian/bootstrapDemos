@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单实例</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
+		<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+		<style>
+			.my-btn .dropdown-menu img{width: 16px; height: 16px; margin: 5px;}
+			.my-btn .dropdown-menu {animation: 0.5s linear fadeIn;}
+			@keyframes fadeIn{
+				from{opacity: 0; transform:translateY(-20px) ;}
+				to{opacity: 1; transform:translateY(0px) ;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<br><br>
+			<div class="dropdown my-btn">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+					Themes 
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">
+						<img src="https://www.codester.com/static/img/popular-icon-alt.png" alt="popular"/>
+						most popular
+					</a></li>
+					<li class="divider"></li>
+					<li><a href="#">
+						<img src="https://www.codester.com/static/uploads/categories/8/icon-alt.png" alt="html5"/>
+						html
+					</a></li>
+					<li><a href="#">
+						<img src="https://www.codester.com/static/uploads/categories/33/icon-alt.png" alt="popular"/>
+						wordpress
+					</a></li>
+					
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		
+	</body>
+</html>

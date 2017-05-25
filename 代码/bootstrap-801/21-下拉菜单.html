@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
+		<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+	</head>
+	<body style="height: 4000px;">
+		<div class="container">
+			<br><br>
+			针对特殊人群的下拉菜单：<br>
+			<!--dropdown 相当于方法名-->
+			<!--dropdown-toggle  点一次下拉，再点一次 收回去-->
+			<div class="dropdown">
+				<button class="btn btn-default dropdown-toggle" type="button" id="dropsownMenu1"
+					data-toggle="dropdown" aria-hsapopup="true" aria-expanded="false">
+					<!--aria  屏幕阅读器里的一些声音提示  针对的特殊人群-->
+					<!-- data-toggle="dropdown" js 的关联效果  ，下拉菜单的效果  -->
+					<!--role="menu" 当前是一个  菜单-->
+					Dropdown
+					<span class="caret"></span>
+				</button>
+				<!--tabindex tab键的顺序 -1 表示没设置
+				-->
+				<ul class="dropdown-menu " role="menu" aria-labelledby="dropsownMenu1">
+					<li role="presentation"><a role="menuitem" href="#" tabindex="-1">菜单1</a></li>
+					<li role="presentation"><a role="menuitem" href="#" tabindex="-1">菜单2</a></li>
+					<li role="presentation"><a role="menuitem" href="#" tabindex="-1">菜单3</a></li>
+					<li role="presentation"><a role="menuitem" href="#" tabindex="-1">菜单4</a></li>
+					<li role="presentation"><a role="menuitem" href="#" tabindex="-1">菜单5</a></li>
+				</ul>
+			</div>
+			<br><br>
+			简单版：<br>
+			<div class="dropdown" style="margin-top: 150px">
+				<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+					Dropdown <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu ">
+					<li ><a  href="#" >菜单1</a></li>
+					<li ><a  href="#" >菜单2</a></li>
+					<li ><a  href="#" >菜单3</a></li>
+					<li ><a  href="#" >菜单4</a></li>
+					<li ><a  href="#" >菜单5</a></li>
+				</ul>
+			</div>
+			<br><br>
+			<div class="row" style="margin-top: 150px">
+				<div class="col-lg-4">
+					<!--默认打开状态-->
+					<div class="dropdown open">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu ">
+							<li ><a  href="#" >菜单1</a></li>
+							<li ><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<li ><a  href="#" >菜单4</a></li>
+							<li ><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<!--设置右对齐-->
+					<div class="dropdown open pull-right">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu ">
+							<li ><a  href="#" >菜单1</a></li>
+							<li ><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<li ><a  href="#" >菜单4</a></li>
+							<li ><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="dropdown open ">
+						<!--按钮是块显示，下拉的菜单右对齐-->
+						<button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li ><a  href="#" >菜单1</a></li>
+							<li ><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<li ><a  href="#" >菜单4</a></li>
+							<li ><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" style="margin-top: 300px">
+				<div class="col-lg-2">
+					<!--设置下拉菜单的宽度和父级一样宽-->
+					<div class="dropdown open">
+						<button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu btn-block">
+							<li ><a  href="#" >菜单1</a></li>
+							<li ><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<li ><a  href="#" >菜单4</a></li>
+							<li ><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<!--有分割线的先拉菜单-->
+					<div class="dropdown open">
+						<button class="btn btn-default  dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropdown <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu ">
+							<li class="dropdown-header">第一部分</li>
+							<li ><a  href="#" >菜单1</a></li>
+							<!--被选中的菜单-->
+							<li class="active"><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<!--分隔线-->
+							<li class="divider"></li>
+							<li class="dropdown-header">第二部分</li>
+							<li ><a  href="#" >菜单4</a></li>
+							<!--禁用的菜单-->
+							<li class="disabled"><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				<div class="col-lg-4">
+					<!--上拉菜单-->
+					<div class="dropup open">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+							Dropup <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu ">
+							<li ><a  href="#" >菜单1</a></li>
+							<li ><a  href="#" >菜单2</a></li>
+							<li ><a  href="#" >菜单3</a></li>
+							<li ><a  href="#" >菜单4</a></li>
+							<li ><a  href="#" >菜单5</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+	</body>
+</html>

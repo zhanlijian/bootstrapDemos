@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>bootstrap模板</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
+		<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+		<style>
+			.my_nav{width: 400px;}
+			.tab-content{ width:400px;border: 1px solid #ddd; border-top:none; padding: 50px; border-radius: 0 0 5px 5px;}
+		</style>
+	</head>
+	<body style="height: 4000px;">
+		<div class="container">
+			<br><br>
+			<ul class="nav nav-tabs my_nav">
+				<li class="active"><a href="#a" data-toggle="tab">one</a></li>
+				<li><a href="#b" data-toggle="tab">two</a></li>
+				<li><a href="#c" data-toggle="tab">three</a></li>
+			</ul>
+			<!--选项卡怎样切换呢？-->
+			<ul class="tab-content">
+				<li id="a" class="tab-pane active">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+				<li id="b" class="tab-pane">bbbbbbbbbbbbbbbbbbbbbb</li>
+				<li id="c" class="tab-pane">cccccccccccccccccc</li>
+			</ul>
+			<br>选项卡的淡入淡出的效果<br>
+			<ul class="nav nav-tabs my_nav">
+				<li class="active"><a href="#a1" data-toggle="tab">one</a></li>
+				<li><a href="#b1" data-toggle="tab">two</a></li>
+				<li><a href="#c1" data-toggle="tab">three</a></li>
+			</ul>
+			<ul class="tab-content">
+				<li id="a1" class="fade in tab-pane active">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+				<li id="b1" class="fade tab-pane">bbbbbbbbbbbbbbbbbbbbbb</li>
+				<li id="c1" class="fade tab-pane">cccccccccccccccccc</li>
+			</ul>
+			
+			<br>鼠标移入时选项卡进行切换<br>
+			<ul class="nav nav-tabs my_nav" id="myTabs">
+				<li class="active"><a href="#a2" data-toggle="tab">one</a></li>
+				<li><a href="#b2" data-toggle="tab">two</a></li>
+				<li><a href="#c2" data-toggle="tab">three</a></li>
+			</ul>
+			<ul class="tab-content">
+				<li id="a2" class="fade in tab-pane active">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+				<li id="b2" class="fade tab-pane">bbbbbbbbbbbbbbbbbbbbbb</li>
+				<li id="c2" class="fade tab-pane">cccccccccccccccccc</li>
+			</ul>
+			<br>带下拉菜单选项卡<br>
+			<ul class="nav nav-tabs" style="width: 400px;">
+				<li class="active"><a href="#a3" data-toggle="tab">one</a></li>
+				<li><a href="#b3" data-toggle="tab">two</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						three <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a data-toggle="tab" href="#c3">child1</a></li>
+						<li><a data-toggle="tab" href="#d3">child2</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="tab-content">
+				<li id="a3" class="fade in tab-pane active">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</li>
+				<li id="b3" class="fade tab-pane">bbbbbbbbbbbbbbbbbbbbbb</li>
+				<li id="c3" class="fade tab-pane">cccccccccccccccccc</li>
+				<li id="d3" class="fade tab-pane">dddddddddddd</li>
+			</ul>
+			
+			
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script>
+			//鼠标移上时切换选项卡
+			if(window.navigator.userAgent.toLowerCase().indexOf('mobile') == -1){//对于移动端的处理
+				$('#myTabs a').mouseover(function(){
+					$(this).tab('show');
+				});
+			}
+			
+		</script>
+	</body>
+</html>

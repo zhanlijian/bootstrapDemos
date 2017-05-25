@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>bootstrap模板</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable = no" />
+		<link rel="stylesheet" href="css/bootstrap.css"  type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<canvas id="cv" >浏览器不支持</canvas>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.3.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.js" ></script>
+		<script type="text/javascript" src="js/Chart.js"></script>
+		<script>
+		//定义图形的一些配置信息
+			var lineChartData = {
+				//X轴的横坐标的数据
+				labels:["周一","周二","周三","周四","周五","周六","周日"],
+				datasets:[{
+					//统计表的背景颜色
+					fillColor:"rgba(255,0,0,0.6)",
+					//统计表的画笔颜色
+					strokeColor:"#00ff00",
+					//点的颜色
+					pointColor:"#00f",
+					//点边框的颜色
+					pointStrokeColor:"pink",
+					//鼠标触发时点的颜色
+					pointHighlightFill:"orange",
+					//鼠标触发时点边框的颜色
+					pointHighlightStroke:"purple",
+					//Y轴的坐标
+					data:[8,4,34,300,60,5,200]
+				},
+				{
+					//统计表的背景颜色
+					fillColor:"rgba(0,255,0,0.6)",
+					//统计表的画笔颜色
+					strokeColor:"#ff0000",
+					//点的颜色
+					pointColor:"#00f",
+					//点边框的颜色
+					pointStrokeColor:"pink",
+					//鼠标触发时点的颜色
+					pointHighlightFill:"orange",
+					//鼠标触发时点边框的颜色
+					pointHighlightStroke:"purple",
+					//Y轴的坐标
+					data:[500,200,150,120,80,60,10]
+				}
+				]
+			};
+			window.onload = function(){
+				var oC = document.getElementById('cv');
+				var oGC = oC.getContext('2d');
+				window.myLine = new Chart(oGC).Line(lineChartData,{
+					responsive:true
+				});
+			}
+		</script>
+	</body>
+</html>
